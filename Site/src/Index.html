@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Cursos Profissionalizantes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Curso Profissionalizante</h1>
+            </div>
+            <nav>
+                <ul class="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="login.html">Registrar</a></li>
+                    <li><input type="text" class="search-input" placeholder="Pesquise o curso"></li>
+                    <li><a href="#cursos">Cursos</a></li>
+                    <li><a href="teste.html">Teste de curso</a></li>
+                    <li><p id="usernameDisplay">Bem-vindo(a)!</p></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="welcome-section">
+            <h1 class="glow"><center>Seja Bem-Vindo</center></h1>
+        </section>
+        <section class="intro-section">
+            <h2>Nós Proporcionamos</h2>
+            <h3>Cursos Profissionalizantes Personalizados e Eficazes.</h3>
+            <p>Tenha acesso a um aprendizado exclusivo criado com base nas necessidades do seu futuro profissional.</p>
+        </section>
+        <section id="cursos" class="courses-section">
+            <h2>Cusos mais procurados !</h2>
+            <div class="courses-container">
+                <a href="javascript.html" class="course-card" data-aos="fade-up">
+                    <img src="./Imagens/curso1.jpeg" alt="Curso 1" class="course-image">
+                    <h3>JavaScript</h3>
+                    <p>Aprenda tudo sobre JavaScript aqui!</p>
+                </a>
+                <a href="css.html" class="course-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="./Imagens/curso2.jpeg" alt="Curso 2" class="course-image">
+                    <h3>CSS</h3>
+                    <p>Domine o intermediário de CSS.</p>
+                </a>
+                <a href="html.html" class="course-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="./Imagens/html.jpeg" alt="Curso 3" class="course-image">
+                    <h3>HTML</h3>
+                    <p>Curso avançado de HTML.</p>
+                </a>
+            </div>
+        </section>
+        <section class="package-section">
+            <h2><center> > Pacote Completo < </center></h2>
+            <div class="courses-container">
+                <a href="pacote.html" class="course-card" data-aos="fade-up">
+                    <img src="./Imagens/htmlcssjs.jpeg" alt="Pacote de Cursos" class="course-image">
+                    <h3>Adquira todos os três cursos com desconto!</h3>
+                    <p>Obtenha um conhecimento abrangente com um preço especial.</p>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Curso Profissionalizante</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init(); // Inicializa a biblioteca
+    </script>
+    <script src="scripts.js"></script>
+
+    <script>
+        // Recupera o nome do usuário da sessionStorage
+        const storedUsername = sessionStorage.getItem('username');
+
+        if (storedUsername) {
+            // Se houver um nome de usuário armazenado, ele é exibido
+            document.getElementById('usernameDisplay').textContent = `Bem-vindo(a), ${storedUsername}!`;
+        }
+    </script>
+</body>
+</html>

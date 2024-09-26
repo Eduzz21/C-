@@ -1,0 +1,329 @@
+body {
+    font-family: 'Poppins', sans-serif; /* Fonte moderna */
+    margin: 0;
+    height: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('./Imagens/aprender-html-1024x512.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Estilos para o Cabeçalho */
+header {
+    background-color: rgba(20, 20, 20, 0.9); /* Fundo mais escuro */
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo h1 {
+    margin: 0;
+    font-size: 1.8em; /* Tamanho da fonte da logo */
+}
+
+/* Navegação */
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: #333;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #444;
+}
+
+/* Estilos para o Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(20, 20, 20, 0.8);
+    color: white;
+    margin-top: auto;
+}
+
+/* Animação de Brilho para Títulos */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 215, 0, 0.5), 0 0 15px rgba(255, 215, 0, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 215, 0, 1), 0 0 40px rgba(255, 215, 0, 1);
+    }
+    100% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 215, 0, 0.5), 0 0 15px rgba(255, 215, 0, 0.5);
+    }
+}
+
+.glow {
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Seção de Boas-Vindas */
+.welcome-section {
+    background-image: url('sua-imagem-de-fundo.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.welcome-section h1 {
+    font-size: 5vw;
+    animation: slideIn 0.5s ease forwards;
+    color: #ffffff;
+}
+
+@media (max-width: 600px) {
+    .welcome-section h1 {
+        font-size: 4em;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Seção de Cursos */
+.courses-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.courses-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.course-card {
+    background-color: rgba(40, 40, 40, 0.9);
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px;
+    width: 220px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.course-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+    background-color: #555;
+}
+
+.course-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.courses-container a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.course-card h3,
+.course-card p {
+    color: #ffffff;
+}
+
+/* Seção de Depoimentos */
+.testimonials {
+    margin: 50px 0;
+}
+
+.testimonial {
+    margin: 20px;
+    font-style: italic;
+}
+
+/* Botão de Ação */
+.button {
+    padding: 12px 25px;
+    background-color: #141313;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #080808;
+    transform: scale(1.05);
+}
+
+/* Seção de Introdução */
+.intro-section {
+    background-color: rgba(10, 10, 10, 0.9);
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.intro-section h2,
+.intro-section h3 {
+    color: #FFD700;
+}
+
+.intro-section p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: #f0f0f0;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Preenche a tela toda */
+}
+
+.login-box {
+    background-color: #1E90FF;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 400px; /* Largura máxima */
+    text-align: center;
+    box-sizing: border-box; /* Garante que padding e borda sejam incluídos na largura total */
+}
+
+.login-box input {
+    width: 100%; /* O input agora ocupa 100% da largura disponível dentro do contêiner */
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    box-sizing: border-box; /* Garante que padding e borda sejam incluídos na largura total */
+}
+
+
+.login-box h2 {
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #333;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    transition: background-color 0.3s ease-in-out; /* Transição suave ao hover */
+}
+.login-box p button {
+    background: none;
+    border: none;
+    color: #007BFF;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.login-box p button:hover {
+    color: #0056b3; /* Mudança de cor ao hover */
+}
+.popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.popup-content h2 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+}
+
+.popup-content .button {
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.close-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.login-box form p button {
+    background: none; /* Remove o fundo padrão do botão */
+    border: none; /* Remove a borda padrão */
+    color: #000000; /* Cor personalizada para o texto "Registrar-se" */
+    font-weight: bold; /* Deixa o texto em negrito */
+    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar o mouse */
+    font-size: 16px; /* Ajusta o tamanho da fonte */
+    text-decoration: underline; /* Adiciona o sublinhadfasdsa
+    do */
+}
+
+#usernameDisplay {
+    margin-left: 20px;
+    font-weight: bold;
+    color: #000;
+    display: flex;
+    align-items: center;
+}

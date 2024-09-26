@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalização de Compra</title>
+    <link rel="stylesheet" href="checkout.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Curso Profissionalizante</h1>
+            </div>
+            <nav>
+                <ul class="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="login.html">Registrar</a></li>
+                    <li><input type="text" class="search-input" placeholder="Pesquise o curso"></li>
+                    <li><a href="teste.html">Teste de curso</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="checkout-section tela1">
+            <h2>Finalização de Compra</h2>
+            <div class="course-summary">
+                <img src="./Imagens/html.jpeg" alt="Curso Selecionado" class="course-image">
+                <h3>Curso de HTML Avançado</h3>
+                <p><strong>Carga Horária:</strong> 40 horas</p>
+                <p><strong>Valor:</strong> R$ 200,00</p>
+                <p><strong>Descrição:</strong> Aprofunde-se no HTML e crie websites de alta qualidade.</p>
+            </div>
+            <form class="checkout-form" onsubmit="return handleSubmit(event)">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" required>
+                
+                <label for="email">E-mail</label>
+                <input type="email" id="email" required>
+                
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" required>
+                
+                <label for="pagamento">Forma de Pagamento</label>
+                <select id="pagamento" required>
+                    <option value="" disabled selected>Selecione uma opção</option>
+                    <option value="cartao">Cartão de Crédito</option>
+                    <option value="boleto">Boleto Bancário</option>
+                    <option value="pix">Pix</option>
+                </select>
+                
+                <button type="submit" class="button">Finalizar Compra</button>
+            </form>
+        </section>
+
+        <div id="success-popup" class="popup hidden">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <h2>Compra Concluída com Sucesso!</h2>
+                <p>Verifique seu e-mail para mais informações.</p>
+                <img src="./Imagens/verificar.jpeg" alt="Ícone de Sucesso" class="success-icon">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Curso Profissionalizante</p>
+    </footer>
+
+    <script>
+        function showPopup() {
+            document.getElementById("success-popup").classList.remove("hidden");
+        }
+
+        function closePopup() {
+            document.getElementById("success-popup").classList.add("hidden");
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault(); // Evita a submissão do formulário
+            showPopup(); // Mostra o pop-up de sucesso
+            // Aqui você pode adicionar mais lógica, como enviar os dados do formulário para um servidor, se necessário.
+        }
+    </script>
+</body>
+</html>
