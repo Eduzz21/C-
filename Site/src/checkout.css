@@ -1,0 +1,273 @@
+body {
+    font-family: 'Poppins', sans-serif; /* Fonte moderna */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f0f0f0; /* Fundo claro */
+}
+
+/* Estilos para a seção de finalização de compra */
+.checkout-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra intensa */
+    color: #f0f0f0; /* Texto claro */
+    margin: 20px;
+}
+
+/* Estilos para as imagens de fundo */
+.checkout-section.tela1 { background-image: url('./Imagens/oquee.jpeg'); }
+.checkout-section.tela2 { background-image: url('./Imagens/css.jpeg'); }
+.checkout-section.tela3 { background-image: url('./Imagens/java.jpeg'); }
+.checkout-section.tela4 { background-image: url('./Imagens/ostres.jpeg'); }
+
+/* Estilos para o cabeçalho */
+header {
+    background-color: rgba(20, 20, 20, 0.9); /* Fundo escuro */
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo h1 {
+    margin: 0;
+    font-size: 1.8em; /* Tamanho da fonte da logo */
+}
+
+/* Navegação */
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 15px; /* Margens laterais */
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: #333; /* Cor vibrante e escura */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #444; /* Hover mais claro */
+}
+
+/* Estilo para o resumo do curso */
+.course-summary {
+    text-align: center;
+    max-width: 600px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza */
+}
+
+.course-summary img {
+    width: 200px; /* Largura da imagem do curso */
+    border-radius: 10px;
+}
+
+.course-summary h3 {
+    margin: 10px 0;
+    font-size: 1.5em; /* Tamanho do título */
+}
+
+.course-summary p {
+    line-height: 1.5;
+    margin: 10px 0; /* Espaçamento vertical */
+}
+
+/* Formulário de checkout */
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.checkout-form label {
+    margin: 10px 0 5px;
+    color: #fff; /* Cor clara para os rótulos */
+}
+
+.checkout-form input, .checkout-form select {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Botão de finalizar compra */
+.button {
+    padding: 12px 25px;
+    background-color: #141313; /* Cor vibrante */
+    color: #ffffff; 
+    border: none; 
+    border-radius: 20px; 
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+.button:hover {
+    background-color: #080808; /* Cor de hover */
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+
+/* Estilos para o rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(20, 20, 20, 0.8);
+    color: white;
+    margin-top: auto;
+}
+
+/* Estilos para o pop-up */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.hidden { display: none; }
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+.success-icon {
+    width: 50px; /* Ajuste conforme necessário */
+    height: auto;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes buttonHover {
+    from { background-color: #141313; transform: scale(1); }
+    to { background-color: #080808; transform: scale(1.05); }
+}
+
+@keyframes popupShow {
+    from { opacity: 0; transform: scale(0.5); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Aplicando animações */
+.checkout-section { animation: fadeIn 0.5s ease forwards; }
+.button:hover { animation: buttonHover 0.3s forwards; }
+.popup-content { animation: popupShow 0.3s ease forwards; }
+
+/* Efeitos de sombra no formulário */
+.checkout-form input:focus {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    border: 1px solid #00ffff;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+/* Estilos para a apresentação dos cursos */
+.courses-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.course-item {
+    display: flex;
+    align-items: center;
+    background-color: rgba(40, 40, 40, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px;
+    width: 220px; /* Largura dos itens */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-item:hover {
+    transform: scale(1.05); /* Aumenta ao passar o mouse */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.course-image {
+    width: 100px; /* Largura fixa */
+    height: auto;
+    margin-right: 15px; /* Espaço entre a imagem e o texto */
+}
+
+.total-value {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.5em; /* Tamanho da fonte do total */
+}
+
+/* Efeito de brilho ao passar o mouse sobre a imagem do curso */
+.course-summary img {
+    transition: transform 0.3s ease;
+}
+
+.course-summary img:hover {
+    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+}
+
+/* Animação de brilho na imagem do curso */
+@keyframes shine {
+    0% { background-position: -100%; }
+    100% { background-position: 100%; }
+}
+
+.course-summary img:hover {
+    animation: shine 1s infinite; /* Brilho na imagem */
+    background: linear-gradient(90deg, rgba(255,255,255,0.5), rgba(0,0,0,0) 50%);
+    background-size: 200%;
+}
+
+a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Herda a cor do texto do elemento pai */
+}
+
+a:hover {
+    text-decoration: underline; /* Opcional: adiciona um sublinhado ao passar o mouse */
+}
